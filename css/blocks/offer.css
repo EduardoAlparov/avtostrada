@@ -1,0 +1,136 @@
+.offer {
+    width: 100%;
+    height: 100%;
+    min-height: 940px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('../../images/offer-cover.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--white-color);
+}
+
+.offer_modal {
+    height: 100vh;
+    min-height: 100%;
+}
+
+.offer::after {
+    content: '';
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    background-color: rgba(28, 27, 24, 0.8);
+}
+
+.offer__container {
+    position: relative;
+    z-index: 50;
+    padding: 30px 0 15px 5px;
+}
+
+.offer__headline {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.offer_modal .section__headline {
+    padding-bottom: 20px;
+}
+
+.offer__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.offer__left-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.offer__marker {
+    width: 10px;
+    min-width: 10px;
+    height: 10px;
+
+    border-radius: 100%;
+    background-color: var(--accent-color);
+
+}
+
+.offer__left-text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.offer__right-text {
+    max-width: 679px;
+    margin-bottom: 40px;
+}
+
+.offer__button-wrapper {
+    padding-left: 5px;
+}
+
+@media screen and (max-width: 1221px) {
+    .offer__left-text {
+        font-size: 18px;
+        line-height: 120%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .offer {
+        min-height: 100vh;
+    }
+
+    .offer_modal {
+        min-height: 100vh;
+    }
+
+    .offer__content {
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin: 0 auto;
+    }
+
+    .offer__left-text {
+        font-size: 16px;
+    }
+
+    .offer__right-text {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .offer__button-wrapper {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .offer__content {
+        width: 100%;
+    }
+    .offer__left-text {
+        font-size: 14px;
+    }
+}

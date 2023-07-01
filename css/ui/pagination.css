@@ -1,0 +1,56 @@
+.pagination {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+
+    background-color: #D1D1D2;
+    z-index: 50;
+}
+
+.pagination_transparent {
+    background-color: transparent;
+}
+
+.pagination__list {
+    transform: translateY(-2px);
+    display: flex;
+}
+
+.pagination__item {
+    height: 2px;
+    width: 10%;
+
+    background-color: transparent;
+}
+
+.pagination__item_static {
+    width: 20%;
+}
+
+.pagination__item_active {
+    background-color: var(--accent-color);
+}
+
+.offer__headline .pagination {
+    bottom: -2px;
+}
+
+#offer-question-2 .pagination__item_static {
+    width: 40%;
+}
+
+#offer-question-3 .pagination__item_static {
+    width: 60%;
+}
+
+#offer-question-4 .pagination__item_static {
+    width: 80%;
+}
+
+#offer-question-5 .pagination__item_static {
+    width: 100%;
+}
+
+.slider__headline .pagination {
+    bottom: -2px;
+}

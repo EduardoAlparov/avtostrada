@@ -1,0 +1,164 @@
+/* reset, normalize: */
+@import url('./css/reset.css');
+/* @import url('./css/normalize.css'); */
+
+/* fonts: */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900&display=swap');
+/* @import url('./css/fonts.css'); */
+
+/* layout blocks: */
+@import url('./css/layout/container.css');
+@import url('./css/layout/section.css');
+@import url('./css/layout/header.css');
+@import url('./css/layout/main.css');
+@import url('./css/layout/footer.css');
+@import url('./css/layout/modal-dialog.css');
+@import url('./css/layout/hidden-menu.css');
+@import url('./css/layout/fancybox-container-reset.css');
+
+/* ui common blocks: */
+@import url('./css/ui/burger-menu.css');
+@import url('./css/ui/feedback-button.css');
+@import url('./css/ui/main-title.css');
+@import url('./css/ui/circle-button.css');
+@import url('./css/ui/input-block.css');
+@import url('./css/ui/pagination.css');
+@import url('./css/ui/checkbox.css');
+@import url('./css/ui/visually-hidden.css');
+
+/* bem blocks: */
+    /* header styles */
+@import url('./css/blocks/logo.css');
+@import url('./css/blocks/menu.css');
+@import url('./css/blocks/contacts.css');
+    /* hero */
+@import url('./css/blocks/hero.css');
+@import url('./css/blocks/round-button.css');
+    /* about */
+@import url('./css/blocks/about-company.css');
+@import url('./css/blocks/advantages.css');
+@import url('./css/blocks/advantage.css');
+    /* catalog */
+@import url('./css/blocks/catalog.css');
+@import url('./css/blocks/product-cart.css');
+    /* offer */
+@import url('./css/blocks/offer.css');
+    /* feedback big section */
+@import url('./css/blocks/feedback-section.css');
+@import url('./css/blocks/feedback-form.css');
+    /* promotion slider */
+@import url('./css/blocks/slider.css');
+@import url('./css/blocks/slide.css');
+    /* regions map  */
+@import url('./css/blocks/regions.css');
+    /* reviews carousel */
+@import url('./css/blocks/reviews-carousel.css');
+    /* partners list section*/
+@import url('./css/blocks/partners.css');
+    /* seo section */
+@import url('./css/blocks/seo-section.css');
+    /* footers styles */
+@import url('./css/blocks/accent.css');
+    /* modal cart styles */
+@import url('./css/blocks/cart-details.css');
+@import url('./css/blocks/gallery-cart.css');
+@import url('./css/blocks/info-cart.css');
+    /* modal questions styles */
+@import url('./css/blocks/question.css');
+    /* fixed socials */
+@import url('./css/blocks/socials.css');
+    /* modal cart styles */
+@import url('./css/blocks/delivery.css');
+@import url('./css/blocks/stage.css');
+
+/* commons and secondary styles */
+@import url('./css/commons.css');
+
+:root {
+    --accent-color: #f7c600;
+    --white-color: #ffffff;
+    --grey-one: #1a1918;
+    --grey-two: #605f5e;
+    --grey-three: #d1d1d2;
+    --red-color: #f54337;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--grey-two);
+    text-rendering: optimizeSpeed;
+
+    scroll-behavior: smooth;
+}
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+.main-wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.socials-wrapper {
+    position: fixed;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 120;
+}
+
+.menu-open .socials-wrapper {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 1221px)  {
+    .socials-wrapper {
+        right: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+
+    .socials-wrapper {
+        position: fixed;
+        right: 40px;
+        bottom: 40px;
+        top: unset;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .socials-wrapper {
+        right: 20px;
+        bottom: 20px;
+    }
+}

@@ -1,0 +1,99 @@
+.round-button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 56px 57px;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.round-button__text-wrapper {
+    width: 161.31px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.round-button__text-wrapper img {
+    transition: 7s ease-out;
+}
+
+.round-button__svg-wrapper  {
+    line-height: 1;
+}
+
+.round-button__svg-wrapper svg {
+    fill: #ffffff;
+    transition: 0.3s;
+}
+
+._active .round-button__text-wrapper img {
+    animation: buttonSpin 1s linear;
+}
+
+._active .round-button__svg-wrapper svg {
+    animation: jumpArrow .8s ease-out infinite;
+}
+
+@media (any-hover: hover) {
+    .round-button:hover .round-button__svg-wrapper svg {
+        fill: var(--accent-color);
+        animation: none;
+    }
+}
+
+@keyframes buttonSpin {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes jumpArrow {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(100%)
+    }
+
+    100% {
+        transform: translateY(-100%)
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .round-button {
+        padding: 56px 57px;
+    }
+
+    .round-button__text-wrapper {
+        width: 120px;
+    }
+
+    @keyframes jumpArrow {
+        0% {
+            transform: translateY(-50%);
+        }
+
+        50% {
+            transform: translateY(100%)
+        }
+
+        100% {
+            transform: translateY(-50%)
+        }
+    }
+}

@@ -1,0 +1,214 @@
+.regions__body {
+    position: relative;
+    padding: 40px 0 421px;
+}
+
+.regions__info {
+    position: relative;
+    z-index: 50;
+}
+
+.regions__sub-title {
+    max-width: 1050px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    color: var(--grey-one);
+}
+
+.regions__map {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 40;
+
+    opacity: 0;
+
+    transition: 0.5s ease-in-out;
+}
+
+._active .regions__map {
+    transform: translate(-50%, 0%);
+    opacity: 1;
+}
+
+.regions__map-image {
+    position: relative;
+}
+
+.regions__pin {
+    position: absolute;
+    z-index: 50;
+    top: 0%;
+    right: 0%;
+
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.5s ease-in-out 1s;
+}
+
+._active .regions__pin {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.regions__pin_len {
+    right: 82%;
+    top: 59%;
+    transition-duration: 0.4s;
+}
+.regions__pin_mos {
+    right: 78%;
+    top: 65.5%;
+    transition-duration: 0.6s;
+}
+.regions__pin_krad {
+    right: 75%;
+    top: 87%;
+    transition-duration: 0.7s;
+}
+.regions__pin_tat {
+    right: 68%;
+    top: 66%;
+    transition-duration: 0.5s;
+}
+.regions__pin_kom {
+    right: 68%;
+    top: 50%;
+    transition-duration: 0.6s;
+}
+.regions__pin_tum {
+    right: 58.5%;
+    top: 56%;
+    transition-duration: 0.4s;
+}
+.regions__pin_krar {
+    right: 36.5%;
+    top: 58%;
+    transition-duration: 0.7s;
+}
+.regions__pin_sah {
+    right: 25%;
+    top: 43%;
+    transition-duration: 0.5s;
+}
+.regions__pin_hab {
+    right: 20.5%;
+    top: 80%;
+    transition-duration: 0.6s;
+}
+.regions__pin_kam {
+    right: 8.5%;
+    top: 68%;
+    transition-duration: 0.4s;
+}
+
+.regions__name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    color: #1A1918;
+    word-wrap: break-word;
+    width: min-content;
+}
+
+@media screen and (max-width: 1221px) {
+    .regions__sub-title {
+        max-width: 100%;
+
+        margin-bottom: 20px;
+
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .regions__pin_len {
+        right: 77%;
+        top: 56%;
+        transition-duration: 0.4s;
+    }
+    .regions__pin_mos {
+        right: 73%;
+        top: 64.5%;
+        transition-duration: 0.6s;
+    }
+    .regions__pin_krad {
+        right: 69%;
+        top: 84%;
+        transition-duration: 0.7s;
+    }
+    .regions__pin_tat {
+        right: 65%;
+        top: 64%;
+        transition-duration: 0.5s;
+    }
+    .regions__pin_kom {
+        right: 66%;
+        top: 46%;
+        transition-duration: 0.6s;
+    }
+    .regions__pin_tum {
+        right: 56.5%;
+        top: 53%;
+        transition-duration: 0.4s;
+    }
+    .regions__pin_krar {
+        right: 32.5%;
+        top: 55%;
+        transition-duration: 0.7s;
+    }
+    .regions__pin_sah {
+        right: 23%;
+        top: 41%;
+        transition-duration: 0.5s;
+    }
+    .regions__pin_hab {
+        right: 18.5%;
+        top: 76%;
+        transition-duration: 0.6s;
+    }
+    .regions__pin_kam {
+        right: 6.5%;
+        top: 64%;
+        transition-duration: 0.4s;
+    }
+
+    .regions__name {
+        font-size: 10px;
+        line-height: 14px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .regions__body {
+        position: relative;
+        padding: 40px 0 320px;
+    }
+
+    .regions__map {
+        height: 70%;
+        background-image: url('../../images/regions/map-mobile.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .regions__map-image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .regions__map {
+        background-size: cover;
+    }
+}

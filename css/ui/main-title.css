@@ -1,0 +1,23 @@
+.main-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 75px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+@media screen and (max-width: 1221px) {
+    .main-title {
+        font-size: 48px;
+        line-height: 55px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+}

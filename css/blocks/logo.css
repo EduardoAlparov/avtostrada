@@ -1,0 +1,36 @@
+.logo {
+    width: 145px;
+    display: block;
+    padding: 5px 0;
+    margin: 0 auto;
+}
+
+.logo_big {
+    width: 220px;
+}
+
+.logo object {
+    width: 100%;
+    pointer-events: none;
+}
+
+.logo img {
+    min-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.header_dark-style .logo img {
+    filter: invert(100%);
+}
+
+.menu-open .logo img {
+    filter: invert(100%);
+}
+
+@media screen and (max-width: 767px) {
+    .logo {
+        width: 125px;
+        padding: 0;
+    }
+}

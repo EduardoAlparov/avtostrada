@@ -1,0 +1,40 @@
+.stage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stage__number {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 30px rgba(106, 89, 30, 0.09);
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.stage__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+}
+
+
+@media screen and (max-width: 767px)  {
+    .stage__text {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}

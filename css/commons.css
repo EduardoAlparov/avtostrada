@@ -1,0 +1,43 @@
+._padding-top-section {
+    padding-top: 240px;
+}
+
+._margin-top-section {
+    margin-top: 115px;
+}
+
+._orange-color {
+    color: var(--accent-color);
+}
+
+._uppercase {
+    text-transform: uppercase;
+}
+
+._lowertext {
+    text-transform: none !important;
+}
+
+._white-color {
+    color: var(--white-color);
+}
+
+._block-scrolling {
+    overflow: hidden;
+}
+
+.menu-open {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1221px) {
+    ._padding-top-section {
+        padding-top: 180px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    ._padding-top-section {
+        padding-top: 80px;
+    }
+}

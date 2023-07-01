@@ -1,0 +1,91 @@
+.btn-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.btn-menu:focus {
+    outline: none;
+}
+
+.btn-menu__text {
+    margin-left: 10px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.btn-menu__bars {
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 3px;
+    background-color: var(--white-color);
+    transition: .3s;
+}
+
+.btn-menu__bars::before,
+.btn-menu__bars::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color);
+    transition: .3s;
+}
+
+.btn-menu__bars:before {
+    transform: translate(0, -8px);
+}
+
+.btn-menu__bars:after {
+    transform: translate(0, 8px);
+}
+
+.menu-open .btn-menu__bars {
+    background-color: transparent;
+}
+
+.menu-open .btn-menu__bars:before {
+    transform: rotate(45deg);
+    background-color: var(--accent-color);
+}
+
+.menu-open .btn-menu__bars:after {
+    transform: rotate(-45deg);
+    background-color: var(--accent-color);
+}
+
+@media (any-hover: hover) {
+    .btn-menu:hover .btn-menu__bars {
+        background-color: var(--accent-color);
+    }
+
+    .btn-menu:hover .btn-menu__bars::after{
+        background-color: var(--accent-color);
+    }
+
+    .btn-menu:hover .btn-menu__bars::before{
+        background-color: var(--accent-color);
+    }
+
+    .menu-open .btn-menu__bars:hover {
+        background-color: transparent;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .btn-menu__bars {
+        width: 20px;
+        height: 3px;
+    }
+}

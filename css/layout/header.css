@@ -1,0 +1,155 @@
+.header {
+    height: 70px;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    border-color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    border-width:  1px 0 1px 0;
+    transition: top 0.3s ease-out;
+}
+
+.header_dark-style {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: var(--grey-three);
+}
+
+.menu-open .header {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: var(--grey-three);
+}
+
+.sticky {
+    top: -150px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header__container {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__col {
+    height: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    border-width:  0 1px 0 0;
+}
+
+.header__col:first-child {
+    border-color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    border-width:  0 1px 0 1px;
+}
+
+.header__col:nth-child(2) {
+    border-color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    border-width:  0 1px 0 1px;
+}
+
+.header_dark-style .header__col {
+    border-color: var(--grey-three);
+}
+
+.menu-open .header__col {
+    border-color: var(--grey-three);
+}
+
+.header_dark-style .header__col:first-child {
+    border-color: var(--grey-three);
+}
+
+.menu-open .header__col:first-child {
+    border-color: var(--grey-three);
+}
+
+.header__logo_black {
+    display: none;
+}
+
+.header_dark-style .header__logo_white {
+    display: none;
+}
+
+.menu-open .header__logo_white {
+    display: none;
+}
+
+.header_dark-style .header__logo_black {
+    display: block;
+}
+
+.menu-open .header__logo_black {
+    display: block;
+}
+
+.header__logo,
+.header__menu,
+.header__contacts {
+    padding: 0 40px;
+}
+
+.header__burger-menu {
+    display: none;
+}
+
+.header__button-wrapper {
+    width: 69px;
+    max-width: 69px;
+}
+
+.header_dark-style .feedback-button svg{
+    fill: var(--grey-three);
+}
+
+.menu-open .feedback-button svg {
+    fill: var(--grey-three);
+}
+
+@media screen and (max-width: 1221px) {
+    .header__menu {
+        display: none;
+    }
+
+    .header__logo,
+    .header__menu,
+    .header__contacts {
+        padding: 0 20px;
+    }
+
+    .header__burger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        height: 50px;
+    }
+    .header__button-wrapper {
+        width: 49px;
+        max-width: 49px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header__contacts {
+        display: none;
+    }
+}

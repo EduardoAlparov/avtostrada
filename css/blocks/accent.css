@@ -1,0 +1,12 @@
+.accent {
+    display: flex;
+    gap: 10px;
+}
+
+.accent__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: right;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}

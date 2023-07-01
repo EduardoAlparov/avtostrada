@@ -1,0 +1,38 @@
+.input-block {
+    display: block;
+}
+
+.input-block__input {
+    width: 100%;
+
+    padding: 20px 30px 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+
+    border: 1px solid var(--grey-one);
+    border-radius: 30px;
+    background-color: transparent;
+    outline: none;
+}
+
+.input-block__input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: rgba(37, 38, 39, 0.5);
+}
+
+.input-block_white .input-block__input {
+    color: var(--white-color);
+}
+
+.input-block_white .input-block__input {
+    border: 1px solid var(--white-color);
+}
+
+.input-block_white .input-block__input::placeholder {
+    color: var(--grey-two);
+}

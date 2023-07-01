@@ -1,0 +1,20 @@
+[class*="__container"] {
+    margin: 0 auto;
+    max-width: 1220px;
+    width: 100%;
+    padding: 0 5px;
+}
+
+/* Low resolution desktops and laptops ---------- */
+@media screen and (max-width: 1221px) {
+    [class*="__container"] {
+        max-width: 760px;
+    }
+}
+
+/* Mobile phones (portrait and landscape) ---------- */
+@media screen and (max-width: 767px) {
+    [class*="__container"] {
+        max-width: 95%;
+    }
+}

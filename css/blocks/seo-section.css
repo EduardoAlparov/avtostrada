@@ -1,0 +1,128 @@
+.seo-section {
+    min-height: 1280px;
+    max-height: 1280px;
+
+    overflow: auto;
+
+    background-image: url('../../images/seo-cover.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.seo-section__headline {
+    padding: 240px 0 628px;
+}
+
+.seo-section__title {
+    margin-bottom: 23px;
+}
+
+.seo-section::-webkit-scrollbar {
+    display: none;
+}
+
+.seo-section__text {
+    margin-bottom: 28px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    box-orient: vertical;
+}
+
+.seo-section__text p {
+    margin-bottom: 20px;
+}
+
+.seo-section__text p:last-child {
+    margin-bottom: 0;
+}
+
+.seo-section__text_open {
+    overflow: auto;
+    text-overflow: clip;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: vertical;
+    line-clamp: none;
+    box-orient: vertical;
+}
+
+.seo-section__button-text_opened {
+    display: none;
+}
+
+.seo-section__button_active .circle-button__icon-wrapper {
+    transform: rotate(-90deg);
+}
+
+.seo-section__button_active .seo-section__button-text_closed {
+    display: none;
+}
+
+.seo-section__button_active .seo-section__button-text_opened {
+    display: block;
+}
+
+.seo-section__text,
+.seo-section__title {
+    transform: translateY(200px);
+    opacity: 0;
+
+    transition: 0.9s ease-in-out;
+}
+
+.seo-section__button-wrapper {
+    transform: translateY(200px);
+    opacity: 0;
+
+    transition: 1.1s ease-in-out;
+}
+
+._active .seo-section__text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+._active .seo-section__title {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+._active .seo-section__button-wrapper {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media screen and (max-width: 1221px) {
+    .seo-section {
+        min-height: 100vh;
+        max-height: unset;
+    }
+
+    .seo-section__headline {
+        padding: 240px 0 428px;
+    }
+
+    .seo-section__title {
+        text-align: left;
+    }
+
+    .seo-section__button-wrapper {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .seo-section__headline {
+        padding: 120px 0 200px;
+    }
+}
